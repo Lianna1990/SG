@@ -67,4 +67,7 @@ public class Enemy extends Ship {
         reloadTimer = reloadInterval;
         state = State.DESCENT;
     }
+
+
+
 }

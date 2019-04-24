@@ -33,6 +33,8 @@ public class GameScreen extends BaseScreen {
     private Sound laserSound;
     private Sound bulletSound;
 
+
+
     private EnemyGenerator enemyGenerator;
 
     @Override
@@ -78,8 +80,37 @@ public class GameScreen extends BaseScreen {
 
     private void checkCollisions() {
 
-    }
+        Iterator<Enemy> i = enemy.iterator();
+        Iterator<MainShip> b = mainShip.iterator();
 
+        while (i.hasNext() && b.hasNext()) {
+            Enemy enemies = i.next();
+            MainShip mainShips = b.next();
+
+            if (Math.abs(mainShips.x - enemies.x) <= (mainShips.width + enemies.width) / 2f
+                    && Math.abs(mainShips.y - enemies.y) <= (ainShips.height + enemies.height) / 2f) {
+                i.remove();
+                b.remove();
+            }
+
+            Iterator<Enemy> i = enemy.iterator();
+            while (i.hasNext()) {
+                Enemy e = i.next();
+                if (((MainShip) mainShip).getRect().intersects(e.getRect(), ((MainShip) mainShip).getRect())) {
+                    i.remove();
+                    break;
+                }
+
+                public Rect getRect()
+                {
+                    new Rect(x - width / 2, y - height / 2, x + width / 2, y + height / 2);
+
+                }
+            }
+        }
+
+
+        }
     private void freeAllDestroyedSprites() {
         bulletPool.freeAllDestroyedActiveSprites();
         enemyPool.freeAllDestroyedActiveSprites();
