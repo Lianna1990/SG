@@ -110,7 +110,7 @@ public class GameScreen extends BaseScreen {
         }
 
 
-        }
+    }
     private void freeAllDestroyedSprites() {
         bulletPool.freeAllDestroyedActiveSprites();
         enemyPool.freeAllDestroyedActiveSprites();
