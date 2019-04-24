@@ -79,6 +79,7 @@ public class GameScreen extends BaseScreen {
     }
 
     private void checkCollisions() {
+        //попробовала реализовать таким образом
 
         Iterator<Enemy> i = enemy.iterator();
         Iterator<MainShip> b = mainShip.iterator();
