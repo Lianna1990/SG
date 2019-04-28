@@ -13,8 +13,9 @@ import ru.geekbrains.math.Rect;
 import ru.geekbrains.sprite.Background;
 import ru.geekbrains.sprite.ButtonExit;
 import ru.geekbrains.sprite.ButtonPlay;
-import ru.geekbrains.sprite.Enemy0;
 import ru.geekbrains.sprite.Star;
+import ru.geekbrains.sprite.ButtonNewGame;
+
 
 public class MenuScreen extends BaseScreen {
 
@@ -27,6 +28,9 @@ public class MenuScreen extends BaseScreen {
 
     private ButtonExit buttonExit;
     private ButtonPlay buttonPlay;
+
+    private ButtonNewGame buttonNewGame;
+   // private ButtonGameOver ButtonGameOver;
 
 
 
@@ -48,6 +52,8 @@ public class MenuScreen extends BaseScreen {
         }
         buttonExit = new ButtonExit(atlas);
         buttonPlay = new ButtonPlay(atlas, game);
+        buttonNewGame = new buttonNewGame(atlas);
+       // buttonGameOver = new buttonGameOver(atlas,game);
 
 
         music = Gdx.audio.newMusic(Gdx.files.internal("sounds/music.mp3"));
@@ -66,6 +72,9 @@ public class MenuScreen extends BaseScreen {
         }
         buttonExit.resize(worldBounds);
         buttonPlay.resize(worldBounds);
+        buttonNewGame.resize(worldBounds);
+       // buttonGameOver.resize(worldBounds);
+
     }
 
     @Override
@@ -89,6 +98,8 @@ public class MenuScreen extends BaseScreen {
         }
         buttonExit.draw(batch);
         buttonPlay.draw(batch);
+        buttonNewGame.draw(batch);
+     //   buttonGameOver.draw(batch);
         batch.end();
     }
 
@@ -103,6 +114,9 @@ public class MenuScreen extends BaseScreen {
     public boolean touchDown(Vector2 touch, int pointer) {
         buttonExit.touchDown(touch, pointer);
         buttonPlay.touchDown(touch, pointer);
+        buttonNewGame.touchDown(touch, pointer);
+  //      buttonGameOver.touchDown(touch, pointer);
+
         return false;
     }
 
@@ -110,6 +124,8 @@ public class MenuScreen extends BaseScreen {
     public boolean touchUp(Vector2 touch, int pointer) {
         buttonExit.touchUp(touch, pointer);
         buttonPlay.touchUp(touch, pointer);
+        buttonNewGame.touchDown(touch, pointer);
+   //     buttonGameOver.touchDown(touch, pointer);
         return false;
     }
 }

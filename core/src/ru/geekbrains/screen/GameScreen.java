@@ -39,6 +39,10 @@ public class GameScreen extends BaseScreen {
     private EnemyPool enemyPool;
     private ExplosionPool explosionPool;
 
+    private message GameOver;
+    private ButtonNewGame;
+
+
     private Music music;
     private Sound laserSound;
     private Sound bulletSound;
@@ -49,6 +53,8 @@ public class GameScreen extends BaseScreen {
     @Override
     public void show() {
         super.show();
+
+
         music = Gdx.audio.newMusic(Gdx.files.internal("sounds/music.mp3"));
         music.setLooping(true);
         music.play();
@@ -67,6 +73,7 @@ public class GameScreen extends BaseScreen {
         mainShip = new MainShip(atlas, bulletPool, explosionPool, laserSound);
         enemyPool = new EnemyPool(bulletPool, explosionPool, bulletSound, worldBounds, mainShip);
         enemyGenerator = new EnemyGenerator(atlas, enemyPool, worldBounds);
+        GameOver = new GameOver(atlas);
         state = State.PLAYING;
     }
 
