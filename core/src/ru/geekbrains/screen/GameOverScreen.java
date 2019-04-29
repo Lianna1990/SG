@@ -28,7 +28,7 @@ public class GameOverScreen extends BaseScreen {
 
         menu=new TextButton("Menu");
 
-      retry.addCaptureListener(new ChangeListener() {
+        retry.addCaptureListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
                 game.setScreen(game.gameScreen);
@@ -59,6 +59,7 @@ public class GameOverScreen extends BaseScreen {
     public void show() {
         Gdx.input.setInputProcessor(stage);
     }
+
 
     @Override
     public void hide() {

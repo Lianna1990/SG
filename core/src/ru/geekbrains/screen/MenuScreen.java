@@ -115,7 +115,7 @@ public class MenuScreen extends BaseScreen {
         buttonExit.touchDown(touch, pointer);
         buttonPlay.touchDown(touch, pointer);
         buttonNewGame.touchDown(touch, pointer);
-  //      buttonGameOver.touchDown(touch, pointer);
+        //buttonGameOver.touchDown(touch, pointer);
 
         return false;
     }
@@ -125,7 +125,7 @@ public class MenuScreen extends BaseScreen {
         buttonExit.touchUp(touch, pointer);
         buttonPlay.touchUp(touch, pointer);
         buttonNewGame.touchDown(touch, pointer);
-   //     buttonGameOver.touchDown(touch, pointer);
+        // buttonGameOver.touchDown(touch, pointer);
         return false;
     }
 }

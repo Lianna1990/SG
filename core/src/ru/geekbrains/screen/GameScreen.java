@@ -42,6 +42,11 @@ public class GameScreen extends BaseScreen {
     private message GameOver;
     private ButtonNewGame;
 
+    private ActorJugador jugador;
+    private ActorPinchos pinchos;
+    private Texture texturaJugator, texturaPinchos;
+    private TextureRegion regionPinchos;
+
 
     private Music music;
     private Sound laserSound;
@@ -242,3 +247,4 @@ public class GameScreen extends BaseScreen {
         return false;
     }
 }
+
