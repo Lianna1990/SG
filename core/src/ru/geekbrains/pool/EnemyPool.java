@@ -23,6 +23,7 @@ public class EnemyPool extends SpritesPool<Enemy> {
         this.mainShip = mainShip;
     }
 
+
     @Override
     protected Enemy newObject() {
         return new Enemy(bulletPool, explosionPool, shootSound, worldBounds, mainShip);
