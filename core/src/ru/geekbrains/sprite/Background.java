@@ -17,3 +17,4 @@ public class Background extends Sprite {
         pos.set(worldBounds.pos);
     }
 }
+

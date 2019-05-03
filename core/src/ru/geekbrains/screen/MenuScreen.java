@@ -1,8 +1,6 @@
 package ru.geekbrains.screen;
 
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -13,7 +11,6 @@ import ru.geekbrains.math.Rect;
 import ru.geekbrains.sprite.Background;
 import ru.geekbrains.sprite.ButtonExit;
 import ru.geekbrains.sprite.ButtonPlay;
-import ru.geekbrains.sprite.Enemy0;
 import ru.geekbrains.sprite.Star;
 
 public class MenuScreen extends BaseScreen {
@@ -27,10 +24,6 @@ public class MenuScreen extends BaseScreen {
 
     private ButtonExit buttonExit;
     private ButtonPlay buttonPlay;
-
-
-
-    private Music music;
 
     public MenuScreen(Game game) {
         this.game = game;
@@ -48,14 +41,7 @@ public class MenuScreen extends BaseScreen {
         }
         buttonExit = new ButtonExit(atlas);
         buttonPlay = new ButtonPlay(atlas, game);
-
-
-        music = Gdx.audio.newMusic(Gdx.files.internal("sounds/music.mp3"));
-        music.setLooping(true);
-        music.setVolume(1);
-        music.play();
     }
-
 
     @Override
     public void resize(Rect worldBounds) {
